@@ -1,39 +1,24 @@
 public class PalindromeChecker {
-/** Use case 1 : Application entry and Welcome Message **/
     public static void main(String[] args) {
-        System.out.println("Welcome to Palindrome Checker Management System");
-        System.out.println("Version: 1.0 ");
-        System.out.println("System Initialised Successfully");
-
-        /** Use case 2 : Hardcoded Palindrome checker*/
-        String input ="madam";
-        boolean palindrome=true;
-        input =input.toLowerCase();
-        for (int i = 0; i < input.length() / 2; i++) {
-            if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
-                palindrome = false;
+/** Use case 4 : Char Array Based Palindrome **/
+        String input = "radar";
+        input = input.toLowerCase();
+        char[] chars = input.toCharArray();
+        boolean isPalindrome = true;
+        int start =0;
+        int end = chars.length - 1;
+        while(start<end){
+            if(chars[start]!=chars[end]){
+                isPalindrome=false;
                 break;
             }
-        }
-        if(palindrome){
-            System.out.println("It is a Palindrome");
-        }
-        else{
-            System.out.println("It is not a Palindrome");
-        }
-
-        /** Use case 3: String reverse*/
-        String input1 ="madam";
-        String reverse = "";
-        input1 =input1.toLowerCase();
-        for (int i = input1.length() -1; i >=0; i--) {
-            reverse= reverse+input1.charAt(i);
-        }
-        if(reverse.equals(input1)){
-            System.out.println("It is a Palindrome");
-        }
-        else{
-            System.out.println("It is not a Palindrome");
-        }
-    }
-}
+            else{
+            start++;
+            end--;
+        }}
+        if(isPalindrome){
+            System.out.println("it is a palindrome");}
+            else{
+                System.out.println("it is not a palindrome");
+            }
+    }}
