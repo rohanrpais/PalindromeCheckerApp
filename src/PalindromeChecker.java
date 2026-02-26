@@ -1,17 +1,17 @@
 import java.util.*;
 public class PalindromeChecker {
     public static void main(String[] args) {
-/** Use case 7: Deque Based Palindrome **/
-        String input = "refer";
+/** Use case 8: Linked List Based Palindrome **/
+        String input = "level";
         input = input.toLowerCase();
         char[] arr = input.toCharArray();
         boolean isPalindrome = true;
-        Deque<Character> deque =new ArrayDeque<>();
+        LinkedList<Character> linkedlist =new LinkedList<>();
         for( char c : arr){
-            deque.add(c);
+            linkedlist.add(c);
         }
-            while(deque.size()>1){
-                if(deque.removeLast()!=deque.removeFirst()){
+            while(linkedlist.size()>1){
+                if(linkedlist.removeLast()!=linkedlist.removeFirst()){
                     isPalindrome=false;
                     break;
           }
