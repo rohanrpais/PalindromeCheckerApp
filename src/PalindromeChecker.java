@@ -1,21 +1,22 @@
-import java.util.Stack;
+import java.util.*;
 public class PalindromeChecker {
     public static void main(String[] args) {
 /** Use case 5: Stack Based Palindrome **/
-        String input = "noon";
+        String input = "keshav";
         input = input.toLowerCase();
         boolean isPalindrome = true;
-        Stack<Character> stack=new Stack<Character>();
+        Queue<Character> queue= new LinkedList<>();
+        Stack<Character> stack=new Stack<>();
         for( char c : input.toCharArray()){
+            queue.add(c);
             stack.push(c);
         }
-            for(char c : input.toCharArray()){
-                if(!stack.isEmpty()){
-                    if(stack.pop()!= c){
-                        isPalindrome=false;
-                        break;
+            while(!queue.isEmpty()&& !stack.isEmpty()){
+                if(stack.pop()!=queue.remove()){
+                    isPalindrome=false;
+                    break;
+          }
             }
-        }}
         if(isPalindrome){
             System.out.println("it is a palindrome");}
             else{
