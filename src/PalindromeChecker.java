@@ -1,7 +1,7 @@
 import java.util.*;
 public class PalindromeChecker {
     public static void main(String[] args) {
-/** Use case 5: Stack Based Palindrome **/
+/** Use case 6: Queue and Stack Based Palindrome **/
         String input = "keshav";
         input = input.toLowerCase();
         boolean isPalindrome = true;
