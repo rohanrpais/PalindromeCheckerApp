@@ -13,3 +13,4 @@ public class PalindromeChecker {
             System.out.println(isPalindrome("madam"));
         }
     }
+
