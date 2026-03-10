@@ -25,8 +25,12 @@ public class PalindromeCheckerApp {
         String input = scanner.nextLine();
         String normalized = input.replaceAll("\\s+", "").toLowerCase();
         PalindromeStrategy strategy = new StackStrategy();
+        long startTime = System.nanoTime();
         boolean isPalindrome = strategy.check(normalized);
+        long endTime = System.nanoTime();
+        long duration = endTime - startTime;
         System.out.println("Is Palindrome? : " + isPalindrome);
+        System.out.println("Execution Time : " + duration + " ns");
         scanner.close();
     }
 }
